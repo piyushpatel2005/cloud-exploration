@@ -62,6 +62,21 @@ There is a growing demand for serverless systems where customer can simply use t
 
 ## Type os Cloud Deployment Models
 
+### Private Cloud
+
+Whenever a business requires technology that can be accessible just inside their own company and public exposure is not needed, private cloud might be a possible option. For example, if a company wants to host their intranet website for their employees to be able to collaborate design documents or even documentation, they can use private cloud. In this case, only company employees can access this website.
+
+Interestingly, each public cloud provider also provides a solution to host private cloud solutions such as Google Anthos, Microsoft Azure Stack or AWS Outposts.
+
+### Public Cloud
+
+This is the most common deployment model as most customers move to cloud to use this capability. Any business offering public facing application or website can use public cloud providers to use their services as a public cloud. In this case, they create similar resources but on the public cloud and assign public IPs which can be accessible from anywhere in the world over the internet. Public Cloud services are prone to DDos attacks or other types of hacker or malware attacks. Therefore security is a major concern for any publicly accessible software applications.
+
+### Multi Cloud
+Multi cloud deployment model is usually used by large enterprise customers. This provides customers freedom to choose the best service across any of the cloud providers. For example, a customer can choose Google Dataflow for processing large datasets and can use Cosmos DB as a storage layer. This also avoids possibility of vendor lock-in and customer can choose best pricing per service. For example, Compute Engines might be better priced in GCP whereas databases might be bette priced in Azure or AWS and they can choose relevant services from each of these providers.
+
+### Hybrid Cloud
+Hybrid cloud is like a middle layer between on-premises and public cloud. Businesses can deploy internal services and applications within internal network on the private cloud or on-premises whereas public facing services can be deployed in public cloud to provide better availability and scalability. This also provides better security for internal applications with total control over those applications.
 - Public Cloud: over the public internet by third party provider like Google, MS, AWS, Alibaba
 - Multi Cloud: public cloud can be connected with other cloud provider. 
 - Hybrid cloud: onprem connected with public cloud. Use cases like disaster recovery, to prevent vendor lock-in. downfall is infrastructure cannot be fully utilized as they have their own proprietary resources. 
