@@ -37,12 +37,30 @@ Over time, these cloud providers kept adding more resources and improving perfor
 
 ## Services models
 
-- PaaS
-- Iaas
-- Saas
-- Faas
+All cloud providers offer their services in one of the following service models. Each of these services models provides different levels of control over the resources. So, let's understand those first before delving into further details of each of the services.
 
-### cloud models
+![IaaS vs PaaS vs SaaS](./iaas-paas-saas.jpg "Control of resources by Service Model")
+
+### Infrastructure as a Service (IaaS)
+
+In Iaas, a user needs to handle all the service configurations. This also provides lot of control over the infrastructure including computing and networking. However, with more control, the customer is responsible for more responsibility because they will need to manage the networking, computing infrastructure and storage layers etc. All of these require specialized skills which adds to costs of the team. This also means in general, Iaas might be costlier than PaaS or SaaS model. As you can see from above picture that in this case, the customer controls everything in the application stack except the underlying virtualization and the physical server racks in the data center.
+
+Some services provided under IAAS by Google Cloud are IPs, Firewalls, Storage, Virtual Private Cloud, and Compute Engine.
+### Platform as a Service (PaaS)
+
+Platform as a service, or also known as Paas, delivers and manages all the hardware and software resources to develop applications through the cloud. In this model, developers and IT teams are not fully responsible for managing the infrastructure. The physical hardware, networking and even OS updates are managed by the cloud provider.Developers and IT operations teams can use PaaS to develop, run, and manage applications without having to build and maintain the infrastructure or platform on their own. Customers still have to write the code and manage their data and applications, but the environment to build and deploy apps is managed and maintained by the cloud service provider. 
+
+On GCP, services like Kubernetes Engine, Cloud SQL, BigQuery, Cloud Run, etc. are examples of PaaS services. The customers can provision these resources as they need them and then use them. They are not responsible for managing the physical servers.
+
+### Saas
+Software as a service, or SaaS, provides the entire application stack over the internet, delivering an entire cloud-based application that customers can access and use. SaaS products are completely managed by the service provider and come ready to use, including all updates, bug fixes, and overall maintenance. Most SaaS applications are accessed directly through a web browser, which means customers don’t have to download or install anything on their devices. They can simply access these services using their web browser.
+
+Services like Gmail, Maps, Google workspaces are examples of Saas applications.
+
+### Faas
+There is a growing demand for serverless systems where customer can simply use the runtime to perform small tasks without having to manage the underlying server infrastructure. This type of on-demand computing usually costs less and works upto second on-demand. This has created another set of services known as Function as a service. GCP provides Cloud functions which provides a tiny environment to run small function with definite runtime. We can choose the programming environment, but other than that customer does not have much control over the infrastructure.
+
+## Type os Cloud Deployment Models
 
 - Public Cloud: over the public internet by third party provider like Google, MS, AWS, Alibaba
 - Multi Cloud: public cloud can be connected with other cloud provider. 
