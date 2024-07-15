@@ -39,6 +39,8 @@ Over time, these cloud providers kept adding more resources and improving perfor
 
 All cloud providers offer their services in one of the following service models. Each of these services models provides different levels of control over the resources. So, let's understand those first before delving into further details of each of the services.
 
+Traditional IT infrastructure consists of Data center location, networking, physical servers, virtualization, OS, runtime and application on top of this. Traditionally, companies were responsible for managing all of these. Then came service provider companies which took care of physical location of data center including cooling, security, electric supplies etc. and companies were responsible for managing all other layers.
+
 ![IaaS vs PaaS vs SaaS](./iaas-paas-saas.jpg "Control of resources by Service Model")
 
 ### Infrastructure as a Service (IaaS)
@@ -50,17 +52,21 @@ Some services provided under IAAS by Google Cloud are IPs, Firewalls, Storage, V
 
 Platform as a service, or also known as Paas, delivers and manages all the hardware and software resources to develop applications through the cloud. In this model, developers and IT teams are not fully responsible for managing the infrastructure. The physical hardware, networking and even OS updates are managed by the cloud provider.Developers and IT operations teams can use PaaS to develop, run, and manage applications without having to build and maintain the infrastructure or platform on their own. Customers still have to write the code and manage their data and applications, but the environment to build and deploy apps is managed and maintained by the cloud service provider. 
 
-On GCP, services like Kubernetes Engine, Cloud SQL, BigQuery, Cloud Run, etc. are examples of PaaS services. The customers can provision these resources as they need them and then use them. They are not responsible for managing the physical servers.
+On GCP, services like App Engine, Cloud SQL, BigQuery, Cloud Run, etc. are examples of PaaS services. The customers can provision these resources as they need them and then use them. They are not responsible for managing the physical servers.
 
-### Saas
+### (Software as a Service) Saas
 Software as a service, or SaaS, provides the entire application stack over the internet, delivering an entire cloud-based application that customers can access and use. SaaS products are completely managed by the service provider and come ready to use, including all updates, bug fixes, and overall maintenance. Most SaaS applications are accessed directly through a web browser, which means customers don’t have to download or install anything on their devices. They can simply access these services using their web browser.
 
 Services like Gmail, Maps, Google workspaces are examples of Saas applications.
 
-### Faas
+### (Function as a Service) Faas
 There is a growing demand for serverless systems where customer can simply use the runtime to perform small tasks without having to manage the underlying server infrastructure. This type of on-demand computing usually costs less and works upto second on-demand. This has created another set of services known as Function as a service. GCP provides Cloud functions which provides a tiny environment to run small function with definite runtime. We can choose the programming environment, but other than that customer does not have much control over the infrastructure.
 
-## Type os Cloud Deployment Models
+There is also container as a service model which will be discussed down the line.
+
+## Types of Cloud Deployment Models
+
+In technology industry the cloud can be deployed in one of the following ways. It can be privae cloud where everything is hosted privately, public cloud where it's accessible over the internet publicly or it can also be the middle one called hybrid cloud where some parts of application or services are accessible publicly but some parts are private.
 
 ### Private Cloud
 
@@ -77,7 +83,24 @@ Multi cloud deployment model is usually used by large enterprise customers. This
 
 ### Hybrid Cloud
 Hybrid cloud is like a middle layer between on-premises and public cloud. Businesses can deploy internal services and applications within internal network on the private cloud or on-premises whereas public facing services can be deployed in public cloud to provide better availability and scalability. This also provides better security for internal applications with total control over those applications.
-- Public Cloud: over the public internet by third party provider like Google, MS, AWS, Alibaba
-- Multi Cloud: public cloud can be connected with other cloud provider. 
-- Hybrid cloud: onprem connected with public cloud. Use cases like disaster recovery, to prevent vendor lock-in. downfall is infrastructure cannot be fully utilized as they have their own proprietary resources. 
-- Private Cloud: architecture that exists in on-premise with no public access. Each public cloud has private cloud solution possible on private cloud, Anthos, AWS Outposts, Azure Stack are examples.
+
+## Google Cloud Geography and Regions
+
+Google provides high performance global network which is dedicated to Google services. Google has invested lots of money to layout lots of cables across the globe. These cables connect distinct continents across the sea. At the time of writing this document, Google has 40 regions, 121 zones and 187 edge locations across the world. Google Cloud services are available in over 200 countries and territories across the world. For more upto date information on Google cloud locations, check out their official [Global Locations](https://cloud.google.com/about/locations) page.
+
+Now, before we move further, let's understand how Google Network is laid out across the globe.
+
+## Regions and Zones
+
+Regions are independent geographic locations that consists of zones. Zones and regions are simply logical abstractions of physical resources provided in one or more data centers. Google may own these data centers or those may be leased from third-party data center providers. A zone on the other hand is a deployment area for Google cloud resources within a zone. This can be considered a single failure domain within a region. To deploy application with fault-tolerance and high availability, it should be deployed in multiple zones in a region. Google Cloud intends to offer a minimum of three availability zones in every region. For example `us-west1` region has `us-west1-a`, `us-west1-b` and `us-west1-c` as three zones. It is also possible that services offered in each region might be different or they may be priced differently.
+
+The exact location of these zones is not made public, but businesses can know approximate location of these zones. This allows them to choose the appropriate zone/region based on their user locations to reduce latency.
+
+### Zonal Resources
+Zonal resources operate within a single zone. If an outage occurs within a specific zone such as natural disaster, it can affect some of the services offered in that specific zone. Compute Engine is a very common zonal resource.
+
+### Regional Resources
+These are resources which are deployed across multiple zones within a single region. They have redundancy which provider fault-tolerance and high availability. If one of the zone experiences outage, the service will still be available and served from another zone within the same region. However, if the total region is having an outage, the service is no longer accessible.
+
+### Multi-Regional Resources
+Some of Google Cloud resources can be redundant and can be distributed even across regions. These services will have better availability compared to any regional services. These services include Bigtable, Cloud Storage, etc. These services can tolerate failure of single region.

@@ -2,21 +2,20 @@
 
 Repository to host information on GCP services for learning and certification
 
-1. What is Cloud
-
+- [Cloud Computing Fundamentals](./basics/README.md)
 
 ## Storage Solutions
-- [Google Clousd Storage](./google-cloud-storage/)
+- [Google Clousd Storage](./google-cloud-storage/README.md)
 
 ## Compute Services
-- [Google Kubernetes Engine](./google-kubernetes-engine/)
-- [Compute Engines](./compute-engines/)
+- [Google Kubernetes Engine](./google-kubernetes-engine/README.md)
+- [Compute Engines](./compute-engines/README.md)
 
 ### Serverless
 
-- [Cloud Functions](./cloud-functions/)
-- [Cloud Run](./cloud-run/)
-- [Google App Engine](./app-engine/)
+- [Cloud Functions](./cloud-functions/README.md)
+- [Cloud Run](./cloud-run/README.md)
+- [Google App Engine](./app-engine/README.md)
 
 ### CI/CD
 
@@ -66,5 +65,4 @@ Repository to host information on GCP services for learning and certification
 
 ## Topics to cover
 
-Google Cloud REgions, Zones, Networks
-latency, availablility, durability
+- GCP Cloud Resource Hierarchy
