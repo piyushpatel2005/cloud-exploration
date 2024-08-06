@@ -24,22 +24,8 @@ App Engine is GCP's Paas offering. In this, developers or SysAdmins don't need t
 
 ### Cloud Functions
 
-- function as a services. serverless execution enrivonment for building and connecting various cloud services.
-single function with focus on specific events.
-triggered when event is fired
-no need to manage infrastructure
-written using Java, Python, Go languages
-good choice for data processing or event based triggers
-web hooks for responding to HTTP triggeres
-mobile backend
-loosely coupled logic for APIs.
+Cloud Functions is a lightweight function as a service or Faas offering on GCP. It is a serverless execution environment for building and connecting various cloud services. Users of this service do not need to manage any infrastructure just like App Engine. The basic idea is that you write a single targeted function which executes on a specific event. Cloud functions are associated with an event which acts as a trigger for the function. These are events such as when file is uploaded to storage bucket or a message is published in Pub/Sub topic or other events with the help of Pub/Sub messaging. The function should be small enough to execute in short duration. The code for the function can be writte in one of the supported language runtimes. This is useful for event-based function triggers. Systems like web hooks for responding to HTTP(s) requests or for mobile backend or even ETL processing of asynchronous jobs are well suited to Cloud functions. 
 
 ### cloud Run
 
-fully managed compute for deploying and scaling containerized applications
-build on open source Knative
-abstracts away infra management depending on traffic.
-abstract infrastructure - serverless for containers
-flexibility for language, binary or library. considered Faas
-
-more flexiblity at top and less flexibility on cloud run (bottom)
+Cloud Run is a fully managed compute offering for deploying and scaling containerized application on GCP. This is build on top of open source Knative project and is used for running stateless backend applications. This is also considered one of the Paas solutions for container based development.It abstracts away infrastructure management as developers do not have to manage infrastructure or autoscaling of the application. These are built-in to Cloud Run with pay per use model. You can have up to 1000 container instances by default. This being compute for containerized applications, you're not restricted to using only specific programming langauges and also offer flexibility in configuring the underlying operating system packages. 
