@@ -2,16 +2,16 @@
 
 Repository to host information on GCP services for learning and certification
 ## GCP Overview of Services
-- [Cloud Computing Fundamentals](./basics/README.md)
-- [GCP Compute Options Overview](./basics/compute-options.md)
-- [GCP Storage Options Overview](./networking/basics/storage-options.md)
-- [GCP Networking Services Overview](./basics/networking-services.md)
-- [Set up Free Account](./basics/set-up-account.md)
-- [GCP Resource Hierarchy](./basics/resource-hierarchy.md)
-- [Cloud Billing](./basics/cloud-billing.md)
+- [Cloud Computing Fundamentals](./basics/cloud-computing-fundamentals/README.md)
+- [GCP Compute Options Overview](./basics/compute-services/index.md)
+- [GCP Storage Options Overview](./networking/basics/storage-services/index.md)
+- [GCP Networking Services Overview](./basics/networking-services/index.md)
+- [Set up Free Account](./basics/account-setup/index.md) <!-- TODO : Add full doc -->
+- [GCP Resource Hierarchy](./basics/resource-hierarchy/index.md)
+- [Cloud Billing](./basics/cloud-billing/index.md)
 
 ## Storage Solutions
-- [Google Clousd Storage](./google-cloud-storage/README.md)
+- [Google Cloud Storage](./google-cloud-storage/README.md)
 
 ## Compute Services
 - [Google Kubernetes Engine](./google-kubernetes-engine/README.md)

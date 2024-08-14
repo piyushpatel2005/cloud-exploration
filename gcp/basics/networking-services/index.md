@@ -58,9 +58,11 @@ Cloud VPN allows you to connect existing network to your VPC through IPSec conne
 
 ### Cloud Interconnect
 
-Dedicated Interconnect provides direct physical connections between your on-premises network and Google's network. This connection solution provides high availability, low latency, enterprise-grade connection and is great solution for large amounts of data transfer between two networks. To set up dedicated interconnect, your network and Google's network must be in the same colocation facility. There is additional cost for managing this connection, but it provides lowest latency.
+Dedicated Interconnect provides direct physical connections between your on-premises network and Google's network. This connection solution provides high availability, low latency, enterprise-grade connection and is great solution for large amounts of data transfer between two networks. 
 
-If customer's network and Google's network are not in the same colocation facility, the business can choose to use Partner Interconnect. This provides connectivity between on-premises network and Google Cloud VPC through a supported service provider. 
+To set up **direct interconnect**, your network and Google's network must be in the same colocation facility. There is additional cost for managing this connection, but it provides lowest latency.
+
+If customer's network and Google's network are not in the same colocation facility, the business can choose to use **Partner Interconnect**. This provides connectivity between on-premises network and Google Cloud VPC through a supported service provider. 
 
 ### Direct Peering
 
