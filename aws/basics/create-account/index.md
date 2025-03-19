@@ -7,3 +7,10 @@ When you create an AWS account, you need to provide information such as account 
 The credit card information you've provided becomes the account payment method by default. The resources you created are billed to AWS account payment method depending on the consumption of those resources. You can change the payment method at any time. AWS resources are charged on a pay as you go basis. So, if you're using a resource for few hours, you will be charged only for those hours depending on the base cost. Some resources also have a monthly free quota where you can use certain amount of resources for free every month which means you pay nothing unless you exceed those quota.
 
 Now, I've mentioned not to use root user to access your AWS account. Then you might wonder how do you access AWS? AWS provides a service called IAM (Identity and Access Management) which can be used to create new identities. Here, identities means an entity which can access resources on an AWS account. These can be a user, group or some other service which can access other services. I will explain more about these in the later sections of these lessons. You can create users, groups and roles in IAM and can provide full or limited set of permissions on your AWS account. Any identity you create will by default have no permissions on AWS account. You will have to explicitly provide permissions to these identities. This way if one of these accounts is leaked, your full AWS account is not compromised. Only the services which the user had access to might be affected. You can also revoke permissions from these users to restrict access for compromised users.
+
+## Hardening an Account
+
+- Once an account has been created, you can assign MFA to account. 
+- This used to be physical device, but can be virtual. You can set up budget to alert you when your costs go above certain threshold.
+- Create IAM Identity to access AWS account. This will be general Admin account
+- Next, you will create a second IAM account which will be production account.
