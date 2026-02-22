@@ -4,5 +4,14 @@ Amazon Web Services (AWS) is a cloud computing service provided by Amazon. This 
 
 ## Table of Contents
 
+### Basics
+
 - [Cloud Computing Overview](./basics/cloud-computing/index.md)
 - [Create Your AWS Account](./basics/create-account/index.md) <!-- TODO: add more details -->
+
+### Storage
+
+### Compute
+
+### Security
+

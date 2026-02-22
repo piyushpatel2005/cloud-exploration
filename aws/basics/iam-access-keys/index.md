@@ -1,0 +1,13 @@
+# IAM Access Keys
+
+IAM Access Keys are used to access AWS services using programmatic access. This is used by AWS SDKs or by CLI to authenticate to AWS account using the IAM User credentials. These are long-term credentials which can be used for a long period of time. They don't change regularly. You will have to explicitly rotate them by deleting the old ones and creating new ones. They are different from IAM username and password credentials.
+
+An IAM user can have upto two access keys active at a time. These keys can be created, deleted from the AWS console. These keys can also be made inactivate which will not allow them to be used for authentication. They can also be activated again. The access keys consist of two parts called *Access key ID* and *Secret access key*. When you create your access keys, AWS will provide you both of these values which you should note down and keep them safe. Keep in mind that when you generate these access key, you will see the secret access key only once. AWS will not provide you a way to see those secret access keys again. So, it's your responsibliity to note them down when you generate them.
+
+If you misplace or forget to copy your secret access key, then there is no way to change those. In this situation, you need to remove the access key and generate new one using the same IAM user. This will provide you brand new set of access key id and secret access key. If you've configured your application or command line interface (CLI) to use a specific access key and if you delete the access key, those application or CLI will stop working. If you've your access keys leaked, then you need to rotate those access keys. This simply means deleting the old access keys and generating new set of access keys. This is the reason an IAM user can have two access keys. When you need to rotate access keys, you generate new set of keys, update your application or CLI to use the new set of access keys and then delete the old set of access keys.
+
+Now even though you can generate access keys for root users, it's not recommended as that can compromise your account if leaked. You can't generate access keys for IAM roles or groups. Only IAM users can have access keys associated with them.
+
+## Practical - Create Access Keys
+
+In order to generate access keys, you need to click on the dropdown at the top right corner for your account and select **My Security credentials**. This will take you to the IAM service
