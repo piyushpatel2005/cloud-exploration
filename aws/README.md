@@ -7,11 +7,6 @@ Amazon Web Services (AWS) is a cloud computing service provided by Amazon. This 
 ### Basics
 
 - [Cloud Computing Overview](./basics/cloud-computing/index.md)
-- [Create Your AWS Account](./basics/create-account/index.md) <!-- TODO: add more details -->
-
-### Storage
-
-### Compute
-
-### Security
-
+- [Create Your AWS Account](./basics/create-account/index.md)
+- [Set up MFA](./basics/setup-mfa/index.md)
+- [Create Budget](create-budget/index.md)
